@@ -1,10 +1,20 @@
-<#macro header >
-<div class="ui transparent inverted main menu" id="header">
-    <div class="container">
-        <a class="launch item c-logo" href="/">
-            <i class="dashboard icon"></i>
-            日志平台</a>
-        <span class="item c-copyright"><i class="copyright icon"></i>Tech-Web</span>
-    </div>
-</div>
+<#macro header>
+	<nav class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
 </#macro>

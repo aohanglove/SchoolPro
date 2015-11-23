@@ -1,91 +1,172 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    margin: 0px;
-    padding: 0px;
-    color: #555555;
-    height: 100%;
+  padding-top: 50px;
 }
 
-a {
-    color: #009FDA;
-    cursor: pointer;
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 
-#header {
-    height: 50px;
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
 }
 
-.ui.menu .c-logo {
-    font-size: 18px;
+/*
+ * Sidebar
+ */
 
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
 }
 
-.ui.menu .c-logo:hover .icon {
-    color: #009FDA;
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
 }
 
-.ui.menu .icon.upload {
-    font-size: 22px;
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
 }
 
-.ui.menu .c-copyright {
-    font-size: 13px;
-    margin-top: 5px;
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
 }
 
-.ui.menu .item.c-userinfo {
-    font-size: 13px;
-    margin-top: 10px;
+.inner-bg{
+	padding: 10px 0 170px 0	
+}
+h1,h2 {
+	margin-top: 10px;
+	font-size: 38px;
+	font-weight: 100;
+	line-height: 50px;
+	text-align: center;
+}
+strong{
+	font-weight:50;
+}
+.description{
+	margin: 20px 0 10px 0;
+}
+.description p{
+	text-align: center;
+	font-size: 15px;
 }
 
-.main.container {
-    padding: 10px;
+.form-top {
+	overflow: hidden;
+	padding: 0 25px 15px 25px;
+	background: #fff;
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	text-align: left;
+}
+.form-bottom {
+	padding:20px 20px 30px 25px;
+	background: #eee;
+}
+.text{
+	color:white;
+}
+.back-ground{
+	left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100%; z-index: -999999; position: fixed;
+}
+.form-box{
+	margin-top:35px;
 }
 
-.c-ml1 {
-    margin-left: 10px;
+.form-top-left {
+	float: left;
+	width: 75%;
+	padding-top: 25px;
 }
 
-.c-mr1 {
-    margin-right: 10px;
+.form-top-left h3 { margin-top: 0; }
+
+.form-top-right {
+	float: left;
+	width: 25%;
+	padding-top: 25px;
+	font-size: 30px;
+	text-align: right;
 }
 
-.table-striped > tbody > tr:nth-child(odd) > td,
-.table-striped > tbody > tr:nth-child(odd) > th {
-    background-color: #f9f9f9;
+.bg-blue{
+	background-color: #00ffff;
 }
 
-tbody > tr:hover > td {
-    background-color: #F6F3D5;
+.input-style{
+	height: 14px;
+	width: 100%;
 }
-
-.ui.hidden {
-    display: none;
-}
-
-/* override semantic css */
-.ui.modal > .header {
-    padding: 0.8rem 1rem;
-}
-
-.ui.modal > .content {
-    padding: 1.5rem;
-}
-
-.ui.modal > .content textarea {
-    height: 1rem;
-}
-
-.ui.modal .actions {
-    padding: 1rem 1.5rem;
-}
-
-.ui.grid > .row {
-    margin-top: 0;
-}
-
-.ui.progress {
-    height: 20px;
-    padding: 1px;
-}
-
-/* custom css */

@@ -7,31 +7,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import repo.xirong.java.demo.model.User;
-import repo.xirong.java.demo.service.TestService;
+import repo.xirong.java.demo.service.UserService;
 
 import java.util.ArrayList;
 
 /**
- * Created by xirong on 15/1/28.
+ * 
+ * @title HomeController
+ * @description TODO 
+ * @author hansonliu
+ * @date 2015年11月23日
+ * @version 1.0
  */
 @Controller
 public class HomeController {
+  
     @Autowired
-    private TestService service;
-//
-//    @Autowired
-//    private OrderStatisticService orderStatisticService;
-
-    @RequestMapping(value="/")
-    public ModelAndView index(Model model)
+    private UserService service;
+    
+    @RequestMapping(value="/hello")
+    public String index(Model model)
     {
-        ModelAndView mv =new ModelAndView();
-        mv.setViewName("home");
-
-        ArrayList<User> users=service.getAllUsers();
-        mv.addObject("userList",users);
-
-        return mv;
+      ArrayList<User> users=service.getAllUsers();
+      model.addAttribute("userList", users);
+      return "home";
     }
 
 

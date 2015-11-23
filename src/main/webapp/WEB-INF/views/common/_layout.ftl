@@ -6,8 +6,9 @@
     <title>${title!""} - 日志监控平台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="resources/images/favicon.ico">
-    <link rel="stylesheet" href="resources/css/semantic.min.css" media="all"/>
-
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="resources/css/main.css">
     <#nested>
 
 </head>
@@ -18,20 +19,24 @@
 <!--header-->
     <#include "_header.ftl" >
     <@header></@header>
-
-<!--main start-->
-    <!-- ECharts模块化单文件引入 -->
-    <script src="resources/js/echarts/echarts.js"></script>
-
-    <#nested>
-<!--main end-->
+<div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+      <#include "_sidebar.ftl">
+      <@sidebar></@sidebar>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <#include "_breadcrumb.ftl">
+      <@breadcrumb title="test"></@breadcrumb>
+      <#nested>
+      </div>
 </#macro>
 
 
 <#macro layoutFooter>
-<script type="text/javascript" src="/resources/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="/resources/js/semantic.min.js"></script>
-
+<script type="text/javascript" src="resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="resources/js/semantic.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <#nested>
 
 </body>

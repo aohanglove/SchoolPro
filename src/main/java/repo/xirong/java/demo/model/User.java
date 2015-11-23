@@ -3,18 +3,29 @@ package repo.xirong.java.demo.model;
 import java.util.Date;
 
 /**
- * description:
- * author: xirong
- * date: 2015-05-27
- * version: 1.0
- * copyright 2015 elong Inc ,all rights reserved.
+ * 
+ * @title User
+ * @description TODO 
+ * @author hansonliu
+ * @date 2015年11月23日
+ * @version 1.0
  */
 public class User {
     private  int user_id;
     private String name;
     private int age;
     private  int sex ;
+    private String passWord;
     private Date create_time;
+    
+    
+    public String getPassWord() {
+      return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+      this.passWord = passWord;
+    }
 
     public int getUser_id() {
         return user_id;

@@ -1,10 +1,7 @@
 <#include "common/_layout.ftl">
 <@layoutHead title="网站"></@layoutHead>
-
 <@layoutBody>
 <!-- 这是nested的内容-->
-
-
 <table class="ui table">
     <thead>
     <tr>
@@ -31,10 +28,5 @@
         </#list>
     </tbody>
 </table>
-
-
-
-
 </@layoutBody>
-
 <@layoutFooter></@layoutFooter>

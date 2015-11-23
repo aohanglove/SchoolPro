@@ -11,6 +11,10 @@ import java.util.ArrayList;
  * version: 1.0
  * copyright 2015 elong Inc ,all rights reserved.
  */
-public interface TestService {
+public interface UserService {
     ArrayList<User> getAllUsers ();
+    
+    Boolean validUserByNameAndPass(String userName, String passWord);
+    
+    User getUserByUName(String userName);
 }
