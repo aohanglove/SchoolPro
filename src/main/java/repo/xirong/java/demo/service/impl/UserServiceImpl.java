@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 
     public Boolean validUserByNameAndPass(String userName, String passWord) {
       User user = getUserByUName(userName);
-      if (user != null && passWord.equals(user.getPassWord())) {
+      if (user != null && passWord.equals(user.getPassword())) {
         return true;
       }
       return false;

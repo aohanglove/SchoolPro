@@ -15,16 +15,16 @@ public class User {
     private String name;
     private int age;
     private  int sex ;
-    private String passWord;
+    private String password;
     private Date create_time;
     
     
-    public String getPassWord() {
-      return passWord;
+    public String getPassword() {
+      return password;
     }
 
-    public void setPassWord(String passWord) {
-      this.passWord = passWord;
+    public void setPassword(String password) {
+      this.password = password;
     }
 
     public int getUser_id() {

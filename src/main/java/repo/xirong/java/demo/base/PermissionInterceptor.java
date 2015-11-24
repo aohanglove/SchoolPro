@@ -24,14 +24,14 @@ public class PermissionInterceptor implements HandlerInterceptor {
   //通过session判断权限
   public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2)
       throws Exception {
+    if (arg0.getRequestURL().indexOf("/login/verify") != -1) {
+      return true;
+    }
     Object obj = arg0.getSession().getAttribute("loginUser");
     if (obj == null) {
-      arg0.getRequestDispatcher("/resources/defaultpage/login.html").forward(arg0, arg1);
+      arg0.getRequestDispatcher("/login/").forward(arg0, arg1);
       return false;
     }
     return true;
   }
-
-
 }
-

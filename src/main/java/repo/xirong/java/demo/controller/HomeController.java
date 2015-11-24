@@ -20,12 +20,13 @@ import java.util.ArrayList;
  * @version 1.0
  */
 @Controller
+@RequestMapping(value="/main")
 public class HomeController {
   
     @Autowired
     private UserService service;
     
-    @RequestMapping(value="/hello")
+    @RequestMapping(value="/default")
     public String index(Model model)
     {
       ArrayList<User> users=service.getAllUsers();

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <title>${title!""} - 日志监控平台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="resources/images/favicon.ico">
+    <link rel="shortcut icon" href="/demo/resources/images/favicon.ico">
     <!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="resources/css/main.css">
+	<link rel="stylesheet" href="/demo/resources/css/main.css">
     <#nested>
 
 </head>
@@ -34,8 +34,7 @@
 
 
 <#macro layoutFooter>
-<script type="text/javascript" src="resources/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="resources/js/semantic.min.js"></script>
+<script type="text/javascript" src="/demo/resources/js/jquery-2.1.1.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <#nested>
 

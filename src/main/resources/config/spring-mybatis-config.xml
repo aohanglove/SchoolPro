@@ -23,7 +23,7 @@
         <typeAlias alias="User" type="repo.xirong.java.demo.model.User"/>
     </typeAliases>
     <mappers>
-        <mapper resource="mapper/test.xml"/>
+        <mapper resource="mapper/user.xml"/>
     </mappers>
 
 </configuration>
