@@ -10,24 +10,22 @@
 <link rel="stylesheet" href="/demo/resources/css/main.css">
 </head>
 <body>
+	<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100%; z-index: -999999; position: fixed;">
+		<img src="http://www.gbtags.com/gb/networks/uploads/76bd0870-eff6-4bfd-91c9-f1aa2d2d3122/bootstrap-login-forms/form-2/assets/img/backgrounds/2.jpg" style="position: absolute; width: 100%; height: 100%; z-index: -999999;">
+	</div>
 	<div class="container">
 		<div class="inner-bg">
-			<div style="position: absolute; z-index: 9999;" class="col-sm-8 ">
-				<h1>
-					<strong>瞎扯瞎扯</strong>
-				</h1>
-				<!--<div class="description">
-					<p>这就是一个测试页面，练习练习写css <a href="">行不行</a>
-					, 这就是一个测试页面，练习练习写css</p>
-				</div>-->
-			</div>
-			<div class="row bg-blue">
-				<div class="col-sm-8 col-sm-offset-1">
-					<img
-						src="http://pic.bankofchina.com/bocappd/ad/cnad1/201312/W020140119551914866558.jpg">
-				</div>
-			</div>
-			<div class="row bg-blue">
+			<div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1><strong>铁力一中</strong> 登录</h1>
+                    <div class="description">
+                    	<p>
+                        	这只是一个测试页面，主要用来显示图表 
+                    	</p>
+                    </div>
+                </div>
+            </div>
+			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3 form-box">
 					<div class="form-top">
 						<div class="form-top-left">
@@ -46,7 +44,6 @@
 									<input id="userName" name="userName" type="text"
 										class="form-control" placeholder="UserName..">
 								</div>
-								<div id="nameerror" class="col-sm-10 col-sm-offset-2"><span style="color:red;display:none">userName must be not null</span></div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Password</label>
@@ -54,8 +51,12 @@
 									<input id="passWord" name="passWord" type="password"
 										class="form-control" placeholder="PassWord...">
 								</div>
-								<div id="passerror" class="col-sm-10 col-sm-offset-2"><span style="color:red;display:none">password must be not null</span></div>
 							</div>
+							<#if returnCode?? && returnCode != 11>
+								<div class="col-sm-10 col-sm-offset-2">
+									<span style="color:red;">${returnMessage!""}</span>
+								</div>
+							</#if>
 							<div class="form-group">
 								<div class="col-sm-12 col-sm-offset-2">
 									<button id="submit" class="btn btn-default">Sign in</button>
@@ -65,7 +66,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row bg-blue"></div>
+			<div class="row"></div>
 		</div>
 	</div>
 </body>
