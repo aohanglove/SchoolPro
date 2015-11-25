@@ -1,4 +1,4 @@
-<#macro layoutHead title >
+<#macro layoutHead title>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -14,7 +14,7 @@
 </head>
 </#macro>
 
-<#macro layoutBody>
+<#macro layoutBody sidebarv breadcrumbf breadcrumbs>
 <body>
 <!--header-->
     <#include "_header.ftl" >
@@ -23,11 +23,11 @@
       <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
       <#include "_sidebar.ftl">
-      <@sidebar></@sidebar>
+      <@sidebar sidebar=sidebarv></@sidebar>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <#include "_breadcrumb.ftl">
-      <@breadcrumb title="test"></@breadcrumb>
+      <@breadcrumb breadcrumbf=breadcrumbf breadcrumbs=breadcrumbs></@breadcrumb>
       <#nested>
       </div>
 </#macro>

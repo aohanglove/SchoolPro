@@ -14,25 +14,24 @@ import java.util.ArrayList;
 /**
  * 
  * @title HomeController
- * @description TODO 
+ * @description TODO
  * @author hansonliu
  * @date 2015年11月23日
  * @version 1.0
  */
 @Controller
-@RequestMapping(value="/main")
+@RequestMapping(value = "/main")
 public class HomeController {
-  
-    @Autowired
-    private UserService service;
-    
-    @RequestMapping(value="/default")
-    public String index(Model model)
-    {
-      ArrayList<User> users=service.getAllUsers();
-      model.addAttribute("userList", users);
-      return "home";
-    }
+
+  @Autowired
+  private UserService service;
+
+  @RequestMapping(value = "/default")
+  public String index(Model model) {
+    ArrayList<User> users = service.getAllUsers();
+    model.addAttribute("userList", users);
+    return "home";
+  }
 
 
 }

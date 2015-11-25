@@ -1,6 +1,6 @@
 <#include "common/_layout.ftl">
-<@layoutHead title="网站"></@layoutHead>
-<@layoutBody>
+<@layoutHead title="网站" ></@layoutHead>
+<@layoutBody sidebarv="1" breadcrumbf="学籍管理" breadcrumbs="学籍查询">
 <!-- 这是nested的内容-->
 <table class="ui table">
     <thead>

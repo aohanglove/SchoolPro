@@ -1,6 +1,6 @@
-<#macro breadcrumb title="" subtitle="" >
+<#macro breadcrumb breadcrumbf="" breadcrumbs="">
 <ol class="breadcrumb">
-  <li <#if subtitle == ""> class="active" </#if>>${title!""}</li>
-  <li <#if subtitle != ""> class="active" </#if>>${subtitle}</li>
+  <li <#if breadcrumbs == ""> class="active" </#if>>${breadcrumbf!""}</li>
+  <li <#if breadcrumbs != ""> class="active" </#if>>${breadcrumbs!""}</li>
 </ol>
 </#macro>

@@ -60,7 +60,7 @@ body {
   color: #fff;
   background-color: #428bca;
 }
-/*Ò»¼¶²Ëµ¥*/
+/*Ò»ï¿½ï¿½ï¿½Ëµï¿½*/
 .menu-first{
 	display:block;
 	height:45px;
@@ -69,18 +69,18 @@ body {
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #e1e1e1;
 	padding: 0;
-	font-size: 14px;
-	font-weight: normal;
+	font-size: 20px;
+	font-weight: bolder;
 	text-align: center;
 }
-/*Ò»¼¶²Ëµ¥Êó±ê»®¹ý×´Ì¬*/
+/*Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ê»®ï¿½ï¿½×´Ì¬*/
 .menu-first:hover{
 	text-decoration: none;
 	background-color: #d6d4d5;
 	border-top: 1px solid #b7b7b7;
 	border-bottom: 1px solid #acacac;
 }
-/*¶þ¼¶²Ëµ¥*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½*/
 .menu-second{
 	text-align: center;
 	border-bottom:1px solid #000;
