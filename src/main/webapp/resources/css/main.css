@@ -156,7 +156,7 @@ strong{
 	padding:20px 20px 30px 25px;
 	background: #eee;
 }
-.text{
+.text-white{
 	color:white;
 }
 .back-ground{
@@ -189,4 +189,8 @@ strong{
 .input-style{
 	height: 14px;
 	width: 100%;
+}
+
+.marginl60{
+	margin-left: 60px;
 }

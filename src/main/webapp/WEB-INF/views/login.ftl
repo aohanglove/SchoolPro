@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="inner-bg">
 			<div class="row">
-                <div class="col-sm-8 col-sm-offset-2 text">
+                <div class="col-sm-8 col-sm-offset-2 text-white">
                     <h1><strong>铁力一中</strong> 登录</h1>
                     <div class="description">
                     	<p>
