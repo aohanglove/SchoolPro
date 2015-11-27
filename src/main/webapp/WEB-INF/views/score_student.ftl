@@ -29,13 +29,15 @@
 			    <option>2014年第一学期</option>
 			  </select>
 </from>
-</script>
+
 </@layoutBody>
 <@layoutFooter>
 
 <script src="/demo/resources/js/bootstrap-select.js"></script>
 <script type="text/javascript">
-  window.onload=function(){
-  $('.selectpicker').selectpicker(); 
-  };
+$(document).ready(function(){
+	$('.selectpicker').selectpicker(); 
+  	alert($('.selectpicker').val());
+});
+</script>
   </@layoutFooter>
