@@ -6,28 +6,38 @@
 <!-- 这是nested的内容-->
 
 <form class="form-inline">
-	<div class="form-group">
-        <label>学生ID：</label>
-    </div>
-	<div class="form-group">
-                <input class="form-control"/>
+	    <div class="form-group">
+            <label>学生ID：</label>
+            <input class="form-control"/>
         </div>
-        <div class="form-group marginl60">
+        <div class="form-group ">
 	        <label>学生姓名：</label>
-	    </div>
-        <div class="form-group">
-                <input class="form-control"/>
+            <input class="form-control"/>
+        </div>
+	    
+	    <div class="form-group ">
+	        <label>学生姓名：</label>
+            <input class="form-control"/>
+        </div>
+	    
+	    <div class="form-group ">
+	        <label>学生姓名：</label>
+            <input class="form-control"/>
         </div>
         
-        <div class="form-group marginl60">
-	        <label>学期：</label>
-	    </div>
+        <div class="form-group ">
+	        <label>学生姓名：</label>
+            <input class="form-control"/>
+        </div>
         
-		   <select class="selectpicker">
+        <div class="form-group ">
+	        <label>学生姓名：</label>
+            <select class="selectpicker">
 			    <option>2015年第一学期</option>
 			    <option>2015年第二学期</option>
 			    <option>2014年第一学期</option>
-			  </select>
+		    </select>
+        </div>
 </from>
 </script>
 </@layoutBody>
