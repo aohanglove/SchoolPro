@@ -21,23 +21,24 @@
     <@header></@header>
 <div class="container-fluid">
       <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-      <#include "_sidebar.ftl">
-      <@sidebar sidebar=sidebarv></@sidebar>
-      </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <#include "_breadcrumb.ftl">
-      <@breadcrumb breadcrumbf=breadcrumbf breadcrumbs=breadcrumbs></@breadcrumb>
-      <#nested>
-      </div>
+	      <div class="col-sm-3 col-md-2 sidebar">
+		      <#include "_sidebar.ftl">
+		      <@sidebar sidebar=sidebarv></@sidebar>
+	      </div>
+	      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		      <#include "_breadcrumb.ftl">
+		      <@breadcrumb breadcrumbf=breadcrumbf breadcrumbs=breadcrumbs></@breadcrumb>
+		      <#nested>
+	      </div>
+	   </div>
+</div>
 </#macro>
 
 
 <#macro layoutFooter>
-<script type="text/javascript" src="/demo/resources/js/jquery-2.1.1.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <#nested>
-
-</body>
-</html>
+	<script type="text/javascript" src="/demo/resources/js/jquery-2.1.1.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<#nested>
+	</body>
+	</html>
 </#macro>

@@ -39,13 +39,15 @@
 		    </select>
         </div>
 </from>
-</script>
+
 </@layoutBody>
 <@layoutFooter>
 
 <script src="/demo/resources/js/bootstrap-select.js"></script>
 <script type="text/javascript">
-  window.onload=function(){
-  $('.selectpicker').selectpicker(); 
-  };
+$(document).ready(function(){
+	$('.selectpicker').selectpicker(); 
+  	alert($('.selectpicker').val());
+});
+</script>
   </@layoutFooter>
