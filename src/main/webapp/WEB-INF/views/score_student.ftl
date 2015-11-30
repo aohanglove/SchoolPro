@@ -60,7 +60,7 @@
     	</div>
 </form>
 <HR class="MT30" style="FILTER: progid:DXImageTransform.Microsoft.Glow(color=#987cb9,strength=10)" width="100%" color=#987cb9 SIZE=1>
- <div id="main1" style="height:400px;width:100%" class="MT30"></div>
+ <div id="main" style="height:400px;width:100%" class="MT30"></div>
 
 </@layoutBody>
 <@layoutFooter>
@@ -68,43 +68,94 @@
 <script src="/demo/resources/js/bootstrap-select.js"></script>
 <script src="/demo/resources/js/bootstrap-switch.min.js"></script>
 <script src="/demo/resources/js/icheck.min.js"></script>
-<script src="/demo/resources/js/echarts-all.js"></script>
-<script type="text/javascript">
- // 基于准备好的dom，初始化echarts图表
-        var myChart = echarts.init(document.getElementById('main')); 
-        
-        var option = {
-            tooltip: {
-                show: true
-            },
-            legend: {
-                data:['销量']
-            },
-            xAxis : [
-                {
-                    type : 'category',
-                    data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-                }
-            ],
-            yAxis : [
-                {
-                    type : 'value'
-                }
-            ],
-            series : [
-                {
-                    "name":"销量",
-                    "type":"bar",
-                    "data":[5, 20, 40, 10, 10, 20]
-                }
-            ]
-        };
-
-        // 为echarts对象加载数据 
-        myChart.setOption(option); 
-</script>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+                option = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'邮件营销',
+            type:'line',
+            stack: '总量',
+            data:[120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name:'联盟广告',
+            type:'line',
+            stack: '总量',
+            data:[220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name:'视频广告',
+            type:'line',
+            stack: '总量',
+            data:[150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name:'直接访问',
+            type:'line',
+            stack: '总量',
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            name:'搜索引擎',
+            type:'line',
+            stack: '总量',
+            data:[820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+};
+                    
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
 	$('.selectpicker').selectpicker(); 
 	$("[name='my-checkbox']").bootstrapSwitch('onText', '男');
 	$("[name='my-checkbox']").bootstrapSwitch('offText', '女');
