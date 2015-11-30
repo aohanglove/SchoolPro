@@ -60,7 +60,7 @@
     	</div>
 </form>
 <HR class="MT30" style="FILTER: progid:DXImageTransform.Microsoft.Glow(color=#987cb9,strength=10)" width="100%" color=#987cb9 SIZE=1>
- <div id="main" style="height:400px;width:100%" class="MT30"></div>
+ <div id="main1" style="height:400px;width:100%" class="MT30"></div>
 
 </@layoutBody>
 <@layoutFooter>
@@ -68,7 +68,41 @@
 <script src="/demo/resources/js/bootstrap-select.js"></script>
 <script src="/demo/resources/js/bootstrap-switch.min.js"></script>
 <script src="/demo/resources/js/icheck.min.js"></script>
-<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script src="/demo/resources/js/echarts-all.js"></script>
+<script type="text/javascript">
+ // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main')); 
+        
+        var option = {
+            tooltip: {
+                show: true
+            },
+            legend: {
+                data:['销量']
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    "name":"销量",
+                    "type":"bar",
+                    "data":[5, 20, 40, 10, 10, 20]
+                }
+            ]
+        };
+
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+</script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('.selectpicker').selectpicker(); 
@@ -86,6 +120,8 @@ $(document).ready(function(){
 	    radioClass: 'iradio_square-blue',
 	    increaseArea: '20%' // optional
 	  });
+	  
+	 
 });
 </script>
   </@layoutFooter>
